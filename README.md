@@ -7,7 +7,7 @@ This is a Discord provider for use with the PHP League's [OAuth2 client](https:/
 To install the provider use Composer:
 
 ```
-composer require psecio/oauth2-discord
+composer require impact/oauth2-discord
 ```
 
 ### Usage: OAuth Connection
@@ -58,11 +58,11 @@ if (!isset($_GET['code'])) {
 
 ### Usage: Getting Data
 
-This library can also be used to get information from the API once an authenticated request has been made. This process requires a class that implements the `Psecio\DiscordPHP\ConnectorInterface` and defines a `getToken()` method. This method should return the current OAuth2 token and can then be used with the `Manager` class. For example:
+This library can also be used to get information from the API once an authenticated request has been made. This process requires a class that implements the `\Impact\DiscordAuth\ConnectorInterface` and defines a `getToken()` method. This method should return the current OAuth2 token and can then be used with the `Manager` class. For example:
 
 ```php
 <?php
-class MyConnector implements \Psecio\DiscordPHP\ConnectorInterface
+class MyConnector implements \Impact\DiscordAuth\ConnectorInterface
 {
     public function getToken()
     {
@@ -71,7 +71,7 @@ class MyConnector implements \Psecio\DiscordPHP\ConnectorInterface
 }
 
 $connector = new MyConnector();
-$manager = \Psecio\DiscordPHP\Manager::getInstance($connector);
+$manager = \Impact\DiscordAuth\Manager::getInstance($connector);
 
 ?>
 ```

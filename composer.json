@@ -1,12 +1,12 @@
 {
-    "name": "psecio/oauth2-discord",
+    "name": "impact/oauth2-discord",
     "description": "A Discord provider for the League Oauth2 client",
-    "keywords": ["discord", "provider", "oauth2", "thephpleague"],
+    "keywords": ["discord", "provider", "oauth2", "impact-oauth2"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Chris Cornutt",
-            "email": "ccornutt@phpdeveloper.org"
+            "name": "Tek Xylo",
+            "email": "dirtbikes@impactatv.com"
         }
     ],
     "require": {
@@ -18,7 +18,7 @@
     "autoload": {
         "psr-4": {
             "League\\OAuth2\\Client\\": "src/",
-            "Psecio\\DiscordPHP\\": "src/DiscordPHP"
+            "Impact\\DiscordAuth\\": "src/DiscordAuth"
         }
     }
 }
